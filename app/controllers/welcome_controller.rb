@@ -12,4 +12,5 @@ class WelcomeController < ApplicationController
 
   def elements
   end
+
 end

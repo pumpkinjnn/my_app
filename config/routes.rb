@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   get 'welcome/generic'
 
   get 'welcome/elements'
+
 end
