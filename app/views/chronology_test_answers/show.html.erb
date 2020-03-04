@@ -1,0 +1,31 @@
+<% provide(:title, @chronology_test_answer.name) %>
+
+
+<header id="header" class="alt">
+  <h1><%= @chronology_test_answer.name %></h1>
+</header>
+
+<section id="banner">
+  <div class="inner">
+    <%= image_tag("sexy_geralt.png", :alt => "icon feed", :size => "580x400") %> <br />
+    <h2> Your Answer : <%= @chronology_test_answer.answer %></h2>
+    <div>
+    <%= form_for(@chronology_test_answer) do |f| %>
+
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :answer %>
+    <%= f.text_field :answer %>
+
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+
+    <%= f.label :password_confirmation, "Confirmation" %>
+    <%= f.password_field :password_confirmation %>
+
+    <%= f.submit "Enter Student's Answer", class: "button primary" %>
+    <% end %>
+    </div>
+  </div>
+</section>

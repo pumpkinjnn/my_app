@@ -1,0 +1,32 @@
+<% provide(:title, 'Create Answer Template') %>
+
+
+<header id="header" class="alt">
+  <h1>Submit Standard Answer Below</h1>
+</header>
+
+<section id="banner">
+  <div class="inner">
+    <%= image_tag("chris_columbus.jpg", :alt => "icon feed", :size => "280x300") %> <br />
+    <h2>Submit Your Standard Answer Below</h2>
+    <div>
+    <%= form_for(@chronology_test_answer) do |f| %>
+    <%= render 'shared/error_messages' %>
+
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control' %>
+
+    <%= f.label :answer, "Standard Answer (Separate numbers with spaces)" %>
+    <%= f.text_field :answer, class: 'form-control' %>
+
+    <%= f.label :password %>
+    <%= f.password_field :password, class: 'form-control' %>
+
+    <%= f.label :password_confirmation, "Password Confirmation" %>
+    <%= f.password_field :password_confirmation, class: 'form-control' %>
+
+    <%= f.submit "Create A New Answer Template", class: "button primary" %>
+    <% end %>
+    </div>
+  </div>
+</section>
