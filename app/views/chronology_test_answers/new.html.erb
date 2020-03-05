@@ -19,6 +19,9 @@
     <%= f.label :answer, "Standard Answer (Separate numbers with spaces)" %>
     <%= f.text_field :answer, class: 'form-control' %>
 
+    <%= f.label :student_answer, "student answer" %>
+    <%= f.text_field :student_answer, class: 'form-control' %>
+
     <%= f.label :password %>
     <%= f.password_field :password, class: 'form-control' %>
 
@@ -29,4 +32,5 @@
     <% end %>
     </div>
   </div>
+  <p>Already Have a Template? <%= link_to "Access Existing Template!", chronologyTestLogin_path %></p>
 </section>

@@ -9,17 +9,13 @@
   <div class="inner">
     <%= image_tag("sexy_geralt.png", :alt => "icon feed", :size => "580x400") %> <br />
     <h2> Your Answer : <%= @chronology_test_answer.answer %></h2>
-    <div>
-    <%= form_with do %>
+  </div>
 
-    <%= f.label :name  "Students Answer (put 0 if the student left it blank)"%>
-    <%= f.text_field :name%>
-
-    <%= f.label :password_confirmation, "Confirmation" %>
-    <%= f.password_field :password_confirmation %>
-
-    <%= f.submit "Submit Student's Answer", class: "button primary" %>
-    <% end %>
+  <div id="error_explanation">
+    <div class="alert alert-danger">
+      <%= flash[:danger] %>
     </div>
   </div>
+
+  <p> <%= link_to "Submit and Test Another Answer!", edit_chronology_test_answer_path %></p>
 </section>

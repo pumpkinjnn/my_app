@@ -1,0 +1,36 @@
+<% provide(:title, @chronology_test_answer.name) %>
+
+
+<header id="header" class="alt">
+  <h1><%= @chronology_test_answer.name %></h1>
+</header>
+
+<section id="banner">
+  <div class="inner">
+    <%= image_tag("sexy_geralt.png", :alt => "icon feed", :size => "580x400") %> <br />
+    <h2> Enter Student's Answer</h2>
+    <div>
+      <%= form_for(@chronology_test_answer, :action => "update") do |f| %>
+      <%= render 'shared/error_messages' %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
+
+      <%= f.label :answer, "Standard Answer (Separate numbers with spaces)" %>
+      <%= f.text_field :answer, class: 'form-control' %>
+
+      <%= f.label :student_answer, "student answer" %>
+      <%= f.text_field :student_answer, class: 'form-control' %>
+
+      <%= f.submit "Submit Student's Answer", class: "button primary" %>
+      <% end %>
+
+    </div>
+  </div>
+
+  <div id="error_explanation">
+    <div class="alert alert-danger">
+      <%= flash[:danger] %>
+    </div>
+  </div>
+</section>

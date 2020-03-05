@@ -1,0 +1,31 @@
+<% provide(:title, 'Login Answer Template') %>
+
+
+<header id="header" class="alt">
+  <h1>Find Answer Template</h1>
+</header>
+
+<section id="banner">
+  <div class="inner">
+    <%= image_tag("chris_columbus.jpg", :alt => "icon feed", :size => "280x300") %> <br />
+    <h2>Find Your Answer Template by Logging in</h2>
+    <div id="error_explanation">
+      <div class="alert alert-danger">
+        <%= flash[:danger] %>
+      </div>
+    </div>
+    <div>
+    <%= form_for(:session, url:chronologyTestLogin_path) do |f| %>
+
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control' %>
+
+    <%= f.label :password %>
+    <%= f.password_field :password, class: 'form-control' %>
+
+    <%= f.submit "Find", class: "button primary" %>
+    <% end %>
+    </div>
+    <p>New Template? <%= link_to "Create now!", newTemplate_path %></p>
+  </div>
+</section>
