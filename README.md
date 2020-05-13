@@ -1,24 +1,2 @@
 # README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This project is developed using Ruby on Rails and deployed using Heroku. The major langue used in the project is (embedded) ruby and html, with a small touch of Javascript. The database is supported with PostgreSQL. And the tests are power by minitests. This project is a personal website that hosts some of the handy utilities, as well as links; it is the result of my effort for CSC-324 class in Grinnell College.
